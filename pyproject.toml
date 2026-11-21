@@ -78,14 +78,21 @@ line-length = 120
 
 [tool.ruff.lint]
 select = [
+    "A",   # flake8-builtins
     "D",   # pydocstyle
     "E",   # pycodestyle
     "F",   # pyflakes
     "FBT", # flake8-boolean-trap
     "I",   # isort
+    "N",   # pep8-naming
     "PT",  # flake8-pytest-style
     "PYI", # flake8-pyi
     "UP",  # pyupgrade
+]
+ignore = [
+    # Public exceptions end with "Exception"; renaming them is a breaking change
+    # tracked in https://github.com/dbfixtures/pytest-postgresql/issues/1512
+    "N818",
 ]
 
 [tool.pyproject-fmt]

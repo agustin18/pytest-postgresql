@@ -1,0 +1,1 @@
+Enable the ruff ``A`` (flake8-builtins) and ``N`` (pep8-naming) rule groups; ``N818`` stays ignored until the public exceptions are renamed.
